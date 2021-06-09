@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Credit Card Validator</title>
+</head>
+<body>
+  <header class="top-banner">
+    <h1>Credit Card Validator</h1>
+  </header>
+  <main>
+    <p>Hi there, welcome to my credit card validator.</p>
+    <p>
+      This mini-app determines whether a credit card is valid by using 
+      the <a href="https://en.wikipedia.org/wiki/Luhn_algorithm#Description">luhn algorithm</a>.
+    </p>
+    <p>To use check if a credit card number is valid use the fields below:</p>
+    <div class="validators">
+      <form class="single-validator">
+        <label class="single-validator__label" for="ccNum">
+          Single Credit Card Search: <span class="single-validator__result"></span>
+        </label>
+        <div class="single-validator__fields">
+          <input 
+            class="single-validator__input" 
+            type="text"
+            name="ccNum"
+            placeholder="Enter a single credit card number"
+          >
+          <button class="single-validator__submit" type="submit">Check validity</button>
+        </div>
+      </form>
+      <form class="multi-validator">
+        <label class="multi-validator__label" for="ccList">
+          Batch Credit Card Search:
+        </label>
+        <textarea 
+          class="multi-validator__input" 
+          type="text" 
+          name="ccList"
+          placeholder="Enter credit card numbers separated by commas"
+        ></textarea>
+        <button class="multi-validator__submit" type="submit">Check validity</button>
+        <div class="multi-validator__result"></div>
+      </form>
+    </div>
+</main>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
